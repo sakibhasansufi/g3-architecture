@@ -1,163 +1,246 @@
 /* font collected from google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800&display=swap');
+
 * {
     font-family: 'Work Sans', sans-serif;
 }
 
 /* shared styles */
-header{
+header {
     background: rgba(255, 144, 14, 0.10);
     padding: 50px 240px;
 }
-.btn-primary{
+
+.btn-primary {
     border-radius: 8px;
     background: #FF900E;
     padding: 20px;
-    color: #fff ;
+    color: #fff;
     font-size: 16px;
     font-weight: 600;
     border: none;
     cursor: pointer;
 }
 
-nav{
+nav {
     display: flex;
-    justify-content: space-between;  
-    align-items: center; 
+    justify-content: space-between;
+    align-items: center;
 }
 
-.nav-title, .facts-title{
+.nav-title,
+.facts-title {
     color: #131313;
     font-size: 3rem;
     font-weight: 700;
 }
+
 /*  Home, about, contact us in one line */
-nav >ul {
+nav>ul {
     display: flex;
 }
+
 /* lekhar ager dot gula cole gece */
- nav li{
+nav li {
     list-style: none;
     margin-right: 30px;
     font-size: 1rem;
-    font-weight: 500;  
+    font-weight: 500;
 }
 
-nav li a{
+nav li a {
     text-decoration: none;
     color: #424242;
 }
 
- .banner-content{
+.banner-content {
     max-width: 800px;
     text-align: center;
     margin: 0 auto;
 }
 
-.banner .banner-title{
+.banner .banner-title {
     font-size: 4rem;
     font-weight: 700;
     color: #131313;
 }
 
-.banner-description{
+.banner-description {
     color: #727272;
     font-size: 1rem;
     font-weight: 400;
 }
 
-.banner img{
+.banner img {
     width: 100%;
     margin-top: 30px;
 }
+
 /* main section style */
-main{
+main {
     max-width: 1440px;
     margin: 70px auto;
 }
 
 /* teams style */
 
-.teams-container{
+.teams-container {
     display: flex;
     align-items: center;
 }
 
-.teams-images{
+.teams-images {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap:1.5rem;
+    gap: 1.5rem;
 }
 
-.teams-content{
+.teams-content {
     padding: 0 70px;
 }
 
 
-.teams-title{
+.teams-title {
     font-size: 45px;
 }
 
-.teams-title .quick{
+.teams-title .quick {
     color: #727272;
     font-weight: 500;
 }
 
-.teams-title .our{
+.teams-title .our {
     color: #131313;
-    font-weight: 700;  
+    font-weight: 700;
 }
 
-.teams-title .text-features{
+.teams-title .text-features {
     color: #FF900E;
     font-weight: 700;
 }
 
-.teams-content .teams-description{
+.teams-content .teams-description {
     color: #727272;
     font-size: 16px;
     font-weight: 400;
 }
 
 /* facts related style */
-.facts-description{
+.facts-description {
     color: #727272;
     font-size: 16px;
     font-weight: 400;
 }
+.facts-card-container{
+    display: flex;
+    justify-content: space-around;
+    padding: 40px;
+    margin-top: 50px;
+}
+
+.facts-card-container .card {
+    border-radius: 8px;
+    border: 1px solid #FF900E; 
+    text-align: center;
+    padding: 2rem;  
+}
+
+.card-stats{
+    color: #424242;
+    font-size: 45px;
+    font-weight: 600;
+    margin: 15px 0px;
+}
+
+.card-title{
+    color: #727272;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* sponsors section */
+
+
+.sponsors .sponsors-items{
+    color: #131313;
+    font-size: 45px;
+    font-weight: 700;
+}
+
+.sponsors .sponsors-description{
+    color: #727272;
+    font-size: 16px;
+    font-weight: 400;
+
+}
+
+.sponsors-items{
+    text-align: center;
+}
+.sponsors-image{
+    margin-top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
 
 /* responsive for small devices */
 @media screen and (max-width: 576px) {
-    body{
+    body {
         margin: 0;
         padding: 0;
     }
-    header{
+
+    header {
         padding: 20px;
     }
-    nav, .teams-container{
+
+    nav,
+    .teams-container,.facts-card-container {
         flex-direction: column;
     }
-    .teams-images{
+    .facts-card-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 1px;
+    }
+
+    .teams-images {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
     }
-    .teams-content{
+
+    .teams-content {
         padding: 0 20px;
     }
-    
+
+    .sponsors-image{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+        padding: 0px 20px;
+    }
+
 }
 
 /* medium devices */
 @media screen and (min-width: 576px) and (max-width: 960px) {
-    body{
+    body {
         margin: 0;
         padding: 0;
     }
-    header{
+
+    header {
         padding: 50px;
     }
-    nav, .teams-container{
+
+    nav,
+    .teams-container {
         flex-direction: column;
+    }
+    .facts-card-container{
+        gap: 5px;
     }
 }
